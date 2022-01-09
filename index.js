@@ -3,7 +3,7 @@ const app = express()
 const path = require('path')
 const port = 3000
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/test')
+mongoose.connect('mongodb://localhost:27017/countrydb')
 .then(()=>{
     console.log('database connection established' )
 })
@@ -20,4 +20,4 @@ app.get('/',(req,res)=>{
 })
 app.listen(port,()=>{
     console.log(`listening to port ${port}`)
-})
+})              
